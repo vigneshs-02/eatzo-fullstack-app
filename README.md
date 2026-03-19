@@ -92,7 +92,7 @@ Font        → Playfair Display + Poppins
 
 | Home Page | Menu Page |
 |-----------|-----------|
-| ![Home](screenshots/frontend/home.png) | ![Menu](screenshots/frontend/menu.png) |
+| ![Home](screenshotsfolder/eatzo-Fronted/3.Home.png) | ![Menu](screenshots/frontend/menu.png) |
 
 | Cart Page | My Orders |
 |-----------|-----------|
