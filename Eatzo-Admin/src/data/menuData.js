@@ -17,4 +17,4 @@ export const categories = [
   { name: "Sushi", emoji: "🍱" },
 ]
 
-export const BASE_URL = "http://localhost:8080"
+export const BASE_URL = "https://eatzo-fullstack-app-production.up.railway.app"
