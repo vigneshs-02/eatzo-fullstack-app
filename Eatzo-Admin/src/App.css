@@ -1,0 +1,33 @@
+.admin-layout {
+  min-height: 100vh;
+  background: #0a0a0a;
+  display: flex;
+  flex-direction: column;
+   background: transparent; 
+}
+
+.admin-body {
+  display: flex;
+  flex: 1;
+  margin-top: 64px;
+  min-height: calc(100vh - 64px);
+  width: 100%;
+}
+
+.admin-main {
+  flex: 1;
+  padding: 24px;
+  background: #0a0a0a;
+  overflow-y: auto;
+  margin-left: 10px;
+  width: calc(100% - 240px);
+  box-sizing: border-box;
+  background: transparent;
+}
+
+@media (max-width: 768px) {
+  .admin-main {
+    padding: 20px 16px;
+    margin-left: 60px;
+  }
+}

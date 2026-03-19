@@ -1,0 +1,377 @@
+/* ── Section ───────────────────────────── */
+.about-section {
+  background: #0a0a0a;
+}
+
+/* ── Common ────────────────────────────── */
+.about-tagline {
+  font-family: 'Poppins', sans-serif;
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  color: #d4a843;
+  margin-bottom: 12px;
+}
+
+.about-title {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(28px, 3.5vw, 42px);
+  font-weight: 700;
+  color: #ffffff;
+  margin-bottom: 20px;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.about-divider {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 24px;
+}
+
+.center-divider {
+  justify-content: center;
+}
+
+.divider-line {
+  width: 80px;
+  height: 1px;
+  background: linear-gradient(
+    to right, transparent, #d4a843);
+}
+
+.divider-line:last-child {
+  background: linear-gradient(
+    to left, transparent, #d4a843);
+}
+
+.divider-diamond {
+  color: #d4a843;
+  font-size: 10px;
+}
+
+/* ── Our Story ─────────────────────────── */
+.story-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 80px 32px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: center;
+}
+
+.story-left {
+  display: flex;
+  flex-direction: column;
+}
+
+.story-text {
+  font-family: 'Poppins', sans-serif;
+  font-size: 14px;
+  color: #666666;
+  line-height: 1.9;
+  margin-bottom: 16px;
+}
+
+/* Story Stats */
+.story-stats {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  margin-top: 8px;
+  padding-top: 24px;
+  border-top: 1px solid #1a1a1a;
+}
+
+.story-stat h3 {
+  font-family: 'Playfair Display', serif;
+  font-size: 28px;
+  font-weight: 700;
+  color: #d4a843;
+  margin-bottom: 4px;
+}
+
+.story-stat p {
+  font-family: 'Poppins', sans-serif;
+  font-size: 11px;
+  color:  #9a9a9a;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.story-stat-divider {
+  width: 1px;
+  height: 40px;
+  background: #2a2a2a;
+}
+
+/* Story Right — Cards Grid */
+.story-right {
+  display: flex;
+  justify-content: center;
+}
+
+.story-image-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+  max-width: 360px;
+}
+
+.story-card {
+  padding: 28px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 8px;
+  transition: transform 0.3s ease;
+}
+
+.story-card:hover {
+  transform: translateY(-5px);
+}
+
+.story-card-gold {
+  background: rgba(212, 168, 67, 0.08);
+  border: 1px solid rgba(212, 168, 67, 0.2);
+}
+
+.story-card-dark {
+  background: #111111;
+  border: 1px solid #2a2a2a;
+}
+
+.story-card-icon {
+  font-size: 32px;
+  margin-bottom: 4px;
+}
+
+.story-card-title {
+  font-family: 'Playfair Display', serif;
+  font-size: 16px;
+  font-weight: 600;
+  color: #ffffff;
+}
+
+.story-card-sub {
+  font-family: 'Poppins', sans-serif;
+  font-size: 11px;
+  color: #666666;
+  letter-spacing: 1px;
+}
+
+/* ── Why Choose Us ─────────────────────── */
+.why-us-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 10px 32px;
+}
+
+.why-us-header {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.why-us-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+}
+
+.why-us-card {
+  background: #111111;
+  border: 1px solid #2a2a2a;
+  padding: 32px 24px;
+  text-align: center;
+  transition: all 0.3s ease;
+}
+
+.why-us-card:hover {
+  border-color: rgba(212, 168, 67, 0.3);
+  transform: translateY(-6px);
+  box-shadow: 0 20px 40px 
+    rgba(0, 0, 0, 0.4);
+}
+
+.why-us-icon {
+  font-size: 40px;
+  display: block;
+  margin-bottom: 16px;
+}
+
+.why-us-title {
+  font-family: 'Playfair Display', serif;
+  font-size: 18px;
+  font-weight: 600;
+  color: #ffffff;
+  margin-bottom: 12px;
+}
+
+.why-us-desc {
+  font-family: 'Poppins', sans-serif;
+  font-size: 13px;
+  color:  #9a9a9a;
+  line-height: 1.7;
+}
+
+/* ── Chef Team ─────────────────────────── */
+.chefs-container {
+  background: #080808;
+  border-top: 1px solid #1a1a1a;
+  padding: 80px 32px;
+}
+
+.chefs-header {
+  text-align: center;
+  margin-bottom: 50px;
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.chefs-grid {
+  max-width: 900px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 28px;
+}
+
+.chef-card {
+  background: #111111;
+  border: 1px solid #2a2a2a;
+  overflow: hidden;
+  transition: all 0.3s ease;
+  text-align: center;
+}
+
+.chef-card:hover {
+  border-color: rgba(212, 168, 67, 0.3);
+  transform: translateY(-6px);
+  box-shadow: 0 20px 40px 
+    rgba(0, 0, 0, 0.4);
+}
+
+/* Chef Avatar */
+.chef-avatar {
+  background: rgba(212, 168, 67, 0.06);
+  border-bottom: 1px solid #1a1a1a;
+  padding: 36px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.chef-emoji {
+  font-size: 64px;
+}
+
+/* Chef Info */
+.chef-info {
+  padding: 24px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+}
+
+.chef-name {
+  font-family: 'Playfair Display', serif;
+  font-size: 18px;
+  font-weight: 600;
+  color: #ffffff;
+}
+
+.chef-role {
+  font-family: 'Poppins', sans-serif;
+  font-size: 12px;
+  color: #d4a843;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+}
+
+.chef-divider {
+  width: 40px;
+  height: 1px;
+  background: #2a2a2a;
+  margin: 8px 0;
+}
+
+.chef-experience {
+  font-family: 'Poppins', sans-serif;
+  font-size: 12px;
+  color:  #9a9a9a;
+}
+
+.chef-specialty {
+  font-family: 'Poppins', sans-serif;
+  font-size: 11px;
+  color: #333333;
+  background: #1a1a1a;
+  border: 1px solid #2a2a2a;
+  padding: 4px 12px;
+  letter-spacing: 1px;
+  margin-top: 4px;
+}
+
+/* ── Responsive ────────────────────────── */
+@media (max-width: 968px) {
+  .story-container {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .why-us-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .chefs-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .story-container,
+  .why-us-container {
+    padding: 60px 20px;
+  }
+
+  .mission-container {
+    padding: 50px 20px;
+  }
+
+  .chefs-container {
+    padding: 60px 20px;
+  }
+
+  .story-stats {
+    gap: 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  .story-image-grid {
+    max-width: 280px;
+  }
+
+  .why-us-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .chefs-grid {
+    grid-template-columns: 1fr;
+    max-width: 320px;
+    margin: 0 auto;
+  }
+
+  .story-stats {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}

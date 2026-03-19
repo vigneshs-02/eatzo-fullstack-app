@@ -1,0 +1,109 @@
+.admin-navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 64px;
+  background: #111111;
+  border-bottom: 1px solid #2a2a2a;
+  z-index: 1000;
+}
+
+.admin-navbar-container {
+  height: 100%;
+  padding: 0 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* Logo */
+.admin-logo {
+  font-family: 'Playfair Display', serif;
+  font-size: 22px;
+  font-weight: 700;
+  color: #d4a843;
+  letter-spacing: 4px;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.admin-badge {
+  font-family: 'Poppins', sans-serif;
+  font-size: 9px;
+  font-weight: 600;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: #000000;
+  background: #d4a843;
+  padding: 3px 8px;
+}
+
+/* Right Side */
+.admin-navbar-right {
+  display: flex;
+  align-items: center;
+}
+
+.admin-profile {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.admin-avatar {
+  width: 36px;
+  height: 36px;
+  background: linear-gradient(
+    135deg, #d4a843, #f0c060);
+  color: #000000;
+  font-family: 'Poppins', sans-serif;
+  font-size: 14px;
+  font-weight: 700;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.admin-name {
+  font-family: 'Poppins', sans-serif;
+  font-size: 13px;
+  font-weight: 600;
+  color: #ffffff;
+}
+
+.admin-role {
+  font-family: 'Poppins', sans-serif;
+  font-size: 11px;
+  color: #9a9a9a;
+  letter-spacing: 0.5px;
+}
+
+@media (max-width: 480px) {
+  .admin-info {
+    display: none;
+  }
+}
+
+.admin-logout-btn {
+  border: 1px solid #d4a843;
+  color: #d4a843;
+  background: transparent;
+  padding: 8px 20px;
+  font-family: 'Poppins', sans-serif;
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: all 0.3s;
+  margin-left: 16px;
+}
+
+.admin-logout-btn:hover {
+  background: #d4a843;
+  color: #000000;
+}

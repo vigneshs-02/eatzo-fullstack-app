@@ -1,0 +1,319 @@
+/* ── Base Navbar ───────────────────────── */
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  transition: all 0.4s ease;
+}
+
+/* Transparent — over hero image */
+.navbar-transparent {
+  background: transparent;
+  border-bottom: 1px solid rgba(255,255,255,0.08);
+}
+
+/* Scrolled — solid dark background */
+.navbar-scrolled {
+  background: rgba(10, 10, 10, 0.97);
+  border-bottom: 1px solid #2a2a2a;
+  box-shadow: 0 2px 20px rgba(0,0,0,0.5);
+}
+
+/* ── Container ─────────────────────────── */
+.navbar-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 32px;
+  height: 70px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* ── Logo ──────────────────────────────── */
+.navbar-logo {
+  font-family: 'Playfair Display', serif;
+  font-size: 26px;
+  font-weight: 700;
+  color: #d4a843;
+  letter-spacing: 5px;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.navbar-logo:hover {
+  color: #f0c060;
+}
+
+/* ── Desktop Links ─────────────────────── */
+.navbar-links {
+  display: flex;
+  gap: 36px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-link {
+  font-family: 'Poppins', sans-serif;
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: 2.5px;
+  text-transform: uppercase;
+  color: #ffffff;
+  text-decoration: none;
+  position: relative;
+  transition: color 0.3s;
+}
+
+/* Underline animation on hover */
+.nav-link::after {
+  content: '';
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  width: 0;
+  height: 1px;
+  background: #d4a843;
+  transition: width 0.3s ease;
+}
+
+.nav-link:hover {
+  color: #d4a843;
+}
+
+.nav-link:hover::after {
+  width: 100%;
+}
+
+/* ── Right Side ────────────────────────── */
+.navbar-right {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+
+/* ── Cart Icon ─────────────────────────── */
+.cart-icon {
+  position: relative;
+  color: #ffffff;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.cart-icon:hover {
+  color: #d4a843;
+}
+
+.cart-badge {
+  position: absolute;
+  top: -8px;
+  right: -8px;
+  background: #d4a843;
+  color: #000000;
+  font-size: 10px;
+  font-weight: 700;
+  border-radius: 50%;
+  width: 18px;
+  height: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* ── Login/Logout Button ───────────────── */
+.nav-btn {
+  border: 1px solid #d4a843;
+  color: #d4a843;
+  background: transparent;
+  padding: 8px 22px;
+  font-size: 11px;
+  font-family: 'Poppins', sans-serif;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.nav-btn:hover {
+  background: #d4a843;
+  color: #000000;
+}
+
+/* ── Hamburger ─────────────────────────── */
+.hamburger {
+  display: none;
+  background: transparent;
+  border: none;
+  color: #d4a843;
+  cursor: pointer;
+}
+
+/* ── Mobile Menu ───────────────────────── */
+.mobile-menu {
+  display: none;
+  flex-direction: column;
+  gap: 16px;
+  padding: 20px 32px 28px;
+  background: rgba(10, 10, 10, 0.98);
+  border-top: 1px solid #2a2a2a;
+  animation: slideDown 0.3s ease;
+}
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.mobile-link {
+  font-family: 'Poppins', sans-serif;
+  font-size: 13px;
+  font-weight: 500;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: #ffffff;
+  text-decoration: none;
+  transition: color 0.3s;
+  padding: 6px 0;
+  border-bottom: 1px solid #1a1a1a;
+}
+
+.mobile-link:hover {
+  color: #d4a843;
+}
+
+.mobile-btn {
+  border: 1px solid #d4a843;
+  color: #d4a843;
+  background: transparent;
+  padding: 10px 22px;
+  font-size: 11px;
+  font-family: 'Poppins', sans-serif;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  cursor: pointer;
+  width: fit-content;
+  margin-top: 6px;
+  transition: all 0.3s;
+}
+
+.mobile-btn:hover {
+  background: #d4a843;
+  color: #000000;
+}
+
+/* ── Responsive ────────────────────────── */
+
+/* Tablet */
+@media (max-width: 768px) {
+  .navbar-links {
+    display: none;
+  }
+
+  .navbar-right {
+    display: none;
+  }
+
+  .hamburger {
+    display: block;
+  }
+
+  .mobile-menu {
+    display: flex;
+  }
+}
+
+/* Mobile */
+@media (max-width: 480px) {
+  .navbar-container {
+    padding: 0 20px;
+  }
+
+  .navbar-logo {
+    font-size: 22px;
+    letter-spacing: 4px;
+  }
+}
+
+/* Nav button styled as link */
+.nav-btn-link {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  font-size: 12px;
+  font-family: 'Poppins', sans-serif;
+}
+
+/* Profile Dropdown */
+.profile-dropdown {
+  position: relative;
+}
+
+/* Profile Circle */
+.profile-circle-btn {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 1px solid #d4a843;
+  background: rgba(212, 168, 67, 0.08);
+  color: #d4a843;
+  font-size: 16px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s;
+}
+
+.profile-circle-btn:hover {
+  background: #d4a843;
+  color: #000000;
+}
+.dropdown-menu {
+  position: absolute;
+  top: 110%;
+  right: 0;
+  background: #111111;
+  border: 1px solid #2a2a2a;
+  border-top: 2px solid #d4a843;
+  min-width: 160px;
+  z-index: 100;
+  animation: slideDown 0.2s ease;
+}
+
+.dropdown-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  width: 100%;
+  padding: 12px 16px;
+  font-family: 'Poppins', sans-serif;
+  font-size: 12px;
+  color: #9a9a9a;
+  text-decoration: none;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s;
+  letter-spacing: 0.5px;
+  border-bottom: 1px solid #1a1a1a;
+}
+
+.dropdown-item:last-child {
+  border-bottom: none;
+}
+
+.dropdown-item:hover {
+  color: #d4a843;
+  background: rgba(212, 168, 67, 0.05);
+  padding-left: 20px;
+}

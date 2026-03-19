@@ -1,0 +1,379 @@
+/* ── Page ──────────────────────────────── */
+.my-orders-page {
+  min-height: 100vh;
+  background: #0a0a0a;
+  padding: 120px 32px 80px;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+/* ── Header ────────────────────────────── */
+.my-orders-header {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.my-orders-tagline {
+  font-family: 'Poppins', sans-serif;
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  color: #d4a843;
+  margin-bottom: 12px;
+}
+
+.my-orders-title {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(32px, 4vw, 48px);
+  font-weight: 700;
+  color: #ffffff;
+  margin-bottom: 20px;
+}
+
+.my-orders-divider {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+}
+
+.divider-line {
+  width: 80px;
+  height: 1px;
+  background: linear-gradient(
+    to right, transparent, #d4a843);
+}
+
+.divider-line:last-child {
+  background: linear-gradient(
+    to left, transparent, #d4a843);
+}
+
+.divider-diamond {
+  color: #d4a843;
+  font-size: 10px;
+}
+
+/* ── Orders List ───────────────────────── */
+.orders-list {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+/* ── Order Card ────────────────────────── */
+.order-card {
+  background: #111111;
+  border: 1px solid #2a2a2a;
+  padding: 24px;
+  transition: border-color 0.3s;
+}
+
+.order-card:hover {
+  border-color: rgba(212, 168, 67, 0.3);
+}
+
+/* Card Header */
+.order-card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 16px;
+  padding-bottom: 16px;
+  border-bottom: 1px solid #1a1a1a;
+}
+
+.order-id-section {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.order-icon {
+  color: #d4a843;
+}
+
+.order-id {
+  font-family: 'Playfair Display', serif;
+  font-size: 16px;
+  font-weight: 600;
+  color: #ffffff;
+  margin-bottom: 2px;
+}
+
+.order-date {
+  font-family: 'Poppins', sans-serif;
+  font-size: 11px;
+  color: #555555;
+  letter-spacing: 0.5px;
+}
+
+/* Status Badge */
+.order-status-badge {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  border: 1px solid;
+  padding: 6px 14px;
+  font-family: 'Poppins', sans-serif;
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.status-dot {
+  font-size: 10px;
+}
+
+/* Order Items Tags */
+.order-items-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 20px;
+}
+
+.order-item-tag {
+  background: #1a1a1a;
+  border: 1px solid #2a2a2a;
+  color: #9a9a9a;
+  font-family: 'Poppins', sans-serif;
+  font-size: 11px;
+  padding: 6px 12px;
+  letter-spacing: 0.5px;
+}
+
+/* Card Footer */
+.order-card-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+/* Order Meta */
+.order-meta {
+  display: flex;
+  gap: 24px;
+}
+
+.order-meta-item {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.meta-label {
+  font-family: 'Poppins', sans-serif;
+  font-size: 10px;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: #555555;
+}
+
+.meta-value {
+  font-family: 'Poppins', sans-serif;
+  font-size: 13px;
+  font-weight: 500;
+  color: #ffffff;
+}
+
+.meta-price {
+  font-family: 'Playfair Display', serif;
+  font-size: 18px;
+  font-weight: 700;
+  color: #d4a843;
+}
+
+/* ── Progress Bar ──────────────────────── */
+.order-progress {
+  flex: 1;
+  min-width: 200px;
+}
+
+.progress-steps {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  position: relative;
+}
+
+.progress-step {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  flex: 1;
+}
+
+/* Step Circle */
+.step-circle {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  border: 1px solid #2a2a2a;
+  background: #0a0a0a;
+  color: #444444;
+  font-family: 'Poppins', sans-serif;
+  font-size: 11px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 6px;
+  transition: all 0.3s;
+  z-index: 1;
+}
+
+.step-completed {
+  background: #d4a843;
+  border-color: #d4a843;
+  color: #000000;
+  font-weight: 700;
+}
+
+/* Step Label */
+.step-label {
+  font-family: 'Poppins', sans-serif;
+  font-size: 9px;
+  color: #444444;
+  letter-spacing: 0.5px;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.step-label-active {
+  color: #d4a843;
+}
+
+/* Connector Line */
+.step-line {
+  position: absolute;
+  top: 14px;
+  left: 50%;
+  width: 100%;
+  height: 1px;
+  background: #2a2a2a;
+  z-index: 0;
+}
+
+.step-line-active {
+  background: #d4a843;
+}
+
+/* Track Button */
+.track-btn {
+  border: 1px solid #d4a843;
+  color: #d4a843;
+  background: transparent;
+  padding: 10px 24px;
+  font-family: 'Poppins', sans-serif;
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: all 0.3s;
+  white-space: nowrap;
+}
+
+.track-btn:hover {
+  background: #d4a843;
+  color: #000000;
+}
+
+/* ── Empty Orders ──────────────────────── */
+.orders-empty {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 100px 32px;
+  text-align: center;
+}
+
+.empty-orders-icon {
+  color: #2a2a2a;
+  margin-bottom: 24px;
+}
+
+.empty-orders-title {
+  font-family: 'Playfair Display', serif;
+  font-size: 28px;
+  font-weight: 700;
+  color: #ffffff;
+  margin-bottom: 12px;
+}
+
+.empty-orders-sub {
+  font-family: 'Poppins', sans-serif;
+  font-size: 14px;
+  color: #555555;
+  margin-bottom: 32px;
+  line-height: 1.6;
+}
+
+.start-ordering-btn {
+  background: linear-gradient(
+    135deg, #d4a843, #f0c060);
+  color: #000000;
+  border: none;
+  padding: 14px 36px;
+  font-family: 'Poppins', sans-serif;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: all 0.3s;
+  box-shadow: 0 4px 20px 
+    rgba(212,168,67,0.3);
+}
+
+.start-ordering-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 30px 
+    rgba(212,168,67,0.5);
+}
+
+/* ── Responsive ────────────────────────── */
+@media (max-width: 768px) {
+  .my-orders-page {
+    padding: 100px 20px 60px;
+  }
+
+  .order-card {
+    padding: 20px 16px;
+  }
+
+  .order-card-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+  }
+
+  .order-card-footer {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .order-progress {
+    width: 100%;
+  }
+
+  .progress-steps {
+    gap: 0;
+  }
+}
+
+@media (max-width: 480px) {
+  .step-label {
+    font-size: 8px;
+  }
+
+  .order-meta {
+    gap: 16px;
+  }
+}

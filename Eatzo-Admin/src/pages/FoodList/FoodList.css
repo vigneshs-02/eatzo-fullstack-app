@@ -1,0 +1,230 @@
+/* ── Page ──────────────────────────────── */
+.food-list-page {
+  width: 100%;
+   max-width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+/* ── Header ────────────────────────────── */
+.page-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-bottom: 28px;
+}
+
+.page-tagline {
+  font-family: 'Poppins', sans-serif;
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: #d4a843;
+  margin-bottom: 6px;
+}
+
+.page-title {
+  font-family: 'Playfair Display', serif;
+  font-size: 28px;
+  font-weight: 700;
+  color: #ffffff;
+}
+
+.total-count {
+  font-family: 'Poppins', sans-serif;
+  font-size: 12px;
+  color: #9a9a9a;
+  letter-spacing: 1px;
+}
+
+/* ── Table Wrapper ─────────────────────── */
+.food-table-wrapper {
+  background: #111111;
+  border: 1px solid #2a2a2a;
+  border-top: 2px solid #d4a843;
+  overflow: hidden;
+}
+
+/* ── Table Header ──────────────────────── */
+.food-table-header {
+  display: grid;
+  grid-template-columns:
+    80px 1fr 140px 100px 120px 100px;
+  padding: 16px 20px;
+  background: #0a0a0a;
+  border-bottom: 1px solid #2a2a2a;
+  font-family: 'Poppins', sans-serif;
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: #d4a843;
+}
+
+/* ── Table Body ────────────────────────── */
+.food-table-body {
+  display: flex;
+  flex-direction: column;
+}
+
+/* ── Table Row ─────────────────────────── */
+.food-table-row {
+  display: grid;
+  grid-template-columns:
+    80px 1fr 140px 100px 120px 100px;
+  align-items: center;
+  padding: 16px 20px;
+  border-bottom: 1px solid #1a1a1a;
+  transition: background 0.2s;
+}
+
+.food-table-row:hover {
+  background: rgba(255, 255, 255, 0.02);
+}
+
+.food-table-row:last-child {
+  border-bottom: none;
+}
+
+/* Image */
+.food-img-cell {
+  width: 55px;
+  height: 55px;
+  overflow: hidden;
+  border: 1px solid #2a2a2a;
+}
+
+.food-list-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Name */
+.food-list-name {
+  font-family: 'Playfair Display', serif;
+  font-size: 15px;
+  font-weight: 600;
+  color: #ffffff;
+  padding-right: 16px;
+}
+
+/* Category */
+.food-list-category {
+  font-family: 'Poppins', sans-serif;
+  font-size: 11px;
+  color: #d4a843;
+  background: rgba(212, 168, 67, 0.08);
+  border: 1px solid rgba(212, 168, 67, 0.2);
+  padding: 4px 10px;
+  letter-spacing: 1px;
+  width: fit-content;
+}
+
+/* Price */
+.food-list-price {
+  font-family: 'Playfair Display', serif;
+  font-size: 16px;
+  font-weight: 700;
+  color: #d4a843;
+}
+
+/* Status */
+.food-status {
+  font-family: 'Poppins', sans-serif;
+  font-size: 10px;
+  font-weight: 500;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  padding: 5px 10px;
+  width: fit-content;
+}
+
+.status-available {
+  background: rgba(76, 175, 80, 0.08);
+  border: 1px solid rgba(76, 175, 80, 0.3);
+  color: #4caf50;
+}
+
+.status-unavailable {
+  background: rgba(255, 68, 68, 0.08);
+  border: 1px solid rgba(255, 68, 68, 0.3);
+  color: #ff4444;
+}
+
+/* Delete Button */
+.food-delete-btn {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  background: transparent;
+  border: 1px solid #2a2a2a;
+  color: #666666;
+  padding: 8px 12px;
+  font-family: 'Poppins', sans-serif;
+  font-size: 11px;
+  letter-spacing: 1px;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.food-delete-btn:hover {
+  border-color: #ff4444;
+  color: #ff4444;
+  background: rgba(255, 68, 68, 0.08);
+}
+
+/* ── Empty State ────────────────────────── */
+.food-list-empty {
+  text-align: center;
+  padding: 60px 32px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+}
+
+.empty-icon {
+  font-size: 48px;
+}
+
+.empty-text {
+  font-family: 'Playfair Display', serif;
+  font-size: 20px;
+  color: #444444;
+}
+
+/* ── Responsive ────────────────────────── */
+@media (max-width: 768px) {
+  .food-table-header {
+    display: none;
+  }
+
+  .food-table-row {
+    grid-template-columns: 60px 1fr;
+    grid-template-rows: auto auto auto;
+    gap: 8px;
+    padding: 16px;
+  }
+
+  .food-img-cell {
+    grid-row: 1 / 3;
+  }
+
+  .food-list-name {
+    grid-column: 2;
+  }
+
+  .food-list-category,
+  .food-list-price,
+  .food-status {
+    grid-column: 2;
+    font-size: 12px;
+  }
+
+  .food-delete-btn {
+    grid-column: 2;
+    width: fit-content;
+  }
+}

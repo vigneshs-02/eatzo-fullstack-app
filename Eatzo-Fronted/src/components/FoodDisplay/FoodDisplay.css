@@ -1,0 +1,70 @@
+/* ── Section ───────────────────────────── */
+.food-display {
+  background-color: #0a0a0a;
+  padding: 40px 0 80px;
+}
+
+/* ── Food Grid ─────────────────────────── */
+.food-grid {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px 32px 0;
+  display: grid;
+  grid-template-columns: 
+    repeat(4, 1fr);
+  gap: 40px 24px;
+}
+
+/* ── Empty State ───────────────────────── */
+.food-empty {
+  text-align: center;
+  padding: 20px 32px;
+}
+
+.empty-icon {
+  font-size: 60px;
+  margin-bottom: 10px;
+}
+
+.empty-text {
+  font-family: 'Playfair Display', serif;
+  font-size: 22px;
+  color: #ffffff;
+  margin-bottom: 10px; 
+}
+
+.empty-sub {
+  font-family: 'Poppins', sans-serif;
+  font-size: 13px;
+  color: #666666;
+  letter-spacing: 1px;
+}
+
+/* ── Responsive ────────────────────────── */
+
+/* Tablet */
+@media (max-width: 1024px) {
+  .food-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .food-grid {
+    grid-template-columns: repeat(2, 1fr);
+    padding: 20px 20px 0;
+    gap: 50px 16px;
+  }
+}
+
+/* Mobile */
+@media (max-width: 480px) {
+  .food-grid {
+    grid-template-columns: 1fr;
+    padding: 20px 16px 0;
+  }
+
+  .food-display-header {
+    padding: 0 20px;
+  }
+}

@@ -1,0 +1,10 @@
+ 
+.metadata/
+Eatzo-Fronted/node_modules/
+Eatzo-Admin/node_modules/
+Eatzo-Backend/target/
+Eatzo-Fronted/dist/
+Eatzo-Admin/dist/
+Eatzo-Fronted/.git/
+Eatzo-Admin/.git/
+Eatzo-Backend/.git/
