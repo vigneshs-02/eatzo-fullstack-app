@@ -1,7 +1,5 @@
 # 🍽️ Eatzo — Full Stack Food Delivery Application
 
-![Eatzo Banner](screenshots/frontend/home.png)
-
 > A premium full stack food delivery web application
 > built with Spring Boot, React.js and MySQL.
 > Features a luxury black & gold UI design with
