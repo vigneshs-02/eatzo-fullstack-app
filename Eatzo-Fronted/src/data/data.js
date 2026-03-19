@@ -39,5 +39,5 @@ export const categories = [
   },
 ]
 
-export const BASE_URL = "https://eatzo-fullstack-app-production.up.railway.app"
+export const BASE_URL = "https://eatzo-backend-production.up.railway.app"
 export const DELIVERY_FEE = 40

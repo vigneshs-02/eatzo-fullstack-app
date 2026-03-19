@@ -1,7 +1,7 @@
 import axios from 'axios'
 
 // Base URL — Spring Boot backend
-const BASE_URL = "https://eatzo-fullstack-app-production.up.railway.app"
+const BASE_URL = "https://eatzo-backend-production.up.railway.app"
 
 // Create axios instance
 // This adds token automatically

@@ -17,4 +17,4 @@ export const categories = [
   { name: "Sushi", emoji: "🍱" },
 ]
 
-export const BASE_URL = "https://eatzo-fullstack-app-production.up.railway.app"
+export const BASE_URL = "https://eatzo-backend-production.up.railway.app"

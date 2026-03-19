@@ -1,6 +1,6 @@
 import axios from 'axios'
 
-const BASE_URL = "https://eatzo-fullstack-app-production.up.railway.app"
+const BASE_URL = "https://eatzo-backend-production.up.railway.app"
 
 // Create axios instance with token
 const api = axios.create({
