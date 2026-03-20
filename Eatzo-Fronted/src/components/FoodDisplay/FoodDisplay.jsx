@@ -28,11 +28,11 @@ const FoodDisplay = ({ selectedCategory }) => {
     fetchFoods()
   }, [])
   
-const filteredFoods = selectedCategory === "All"
-  ? foodList.filter(food => food.available)
-  : foodList.filter(food =>
-      food.category === selectedCategory
-      && food.available)
+const filteredFoods = foodList
+  .filter(food => food.available !== false)
+  .filter(food => selectedCategory === "All" 
+    ? true 
+    : food.category === selectedCategory)
 
   return (
     <section className="food-display" id="foods">

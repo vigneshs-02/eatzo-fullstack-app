@@ -89,7 +89,7 @@ public class SecurityConfig {
                     "/api/food/delete/**",
                     "/api/order/list",
                     "/api/order/status"
-                ).hasRole("ADMIN")
+                ).authenticated() 
                 .anyRequest().authenticated()
             )
             .addFilterBefore(jwtFilter,

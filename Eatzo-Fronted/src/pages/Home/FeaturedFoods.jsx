@@ -20,7 +20,9 @@ const FeaturedFoods = () => {
   const navigate = useNavigate()
 
   // Show only first 4 foods
-  const featuredFoods = foodList.slice(0, 4)
+  const featuredFoods = foodList
+  .filter(food => food.available !== false)
+  .slice(0, 4)
 
   const handleAdd = (foodId) => {
     if (!token) {

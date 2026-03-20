@@ -2,6 +2,7 @@ package com.vignesh.eatzo.security;
 
 import jakarta.servlet.FilterChain;
 
+
 import jakarta.servlet.ServletException;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
@@ -14,7 +15,9 @@ import org.springframework.security.web.authentication.
     WebAuthenticationDetailsSource;
 import org.springframework.stereotype.Component;
 import org.springframework.web.filter.OncePerRequestFilter;
-
+import org.springframework.security.core.authority
+.SimpleGrantedAuthority;
+import java.util.List;
 import java.io.IOException;
 
 @Component
@@ -63,17 +66,20 @@ public class JwtFilter extends OncePerRequestFilter {
                 .getContext()
                 .getAuthentication() == null) {
 
-            UserDetails userDetails = 
-                userDetailsService
-                    .loadUserByUsername(email);
+            // ✅ Get role directly from TOKEN
+            String role = jwtUtil.extractRole(token);
 
-            // If token valid → set authentication
+            SimpleGrantedAuthority authority =
+                new SimpleGrantedAuthority(
+                    "ROLE_" + role);
+
             if (jwtUtil.isTokenValid(token)) {
-                UsernamePasswordAuthenticationToken authToken =
+                UsernamePasswordAuthenticationToken 
+                    authToken =
                     new UsernamePasswordAuthenticationToken(
-                        userDetails,
+                        email,
                         null,
-                        userDetails.getAuthorities()
+                        List.of(authority)
                     );
                 authToken.setDetails(
                     new WebAuthenticationDetailsSource()
