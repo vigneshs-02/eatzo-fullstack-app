@@ -19,7 +19,7 @@ import org.springframework.web.cors.UrlBasedCorsConfigurationSource;
 import java.util.List;
 
 @Configuration
-public class SecurityConfig{
+public class SecurityConfig {
 
     @Autowired
     private JwtFilter jwtFilter;
@@ -35,10 +35,12 @@ public class SecurityConfig{
         // ✅ Allow React frontend
         config.setAllowedOrigins(
            List.of(
-    "http://localhost:5173",
-    "http://localhost:5174",
-    "https://eatzo-fullstack-app.vercel.app"
-));
+            "http://localhost:5173",
+            "http://localhost:5174",
+            "https://eatzo-fullstack-app.vercel.app",
+            "https://eatzo-fullstack-app-uyr2.vercel.app",
+            "https://eatzo-admin.vercel.app"
+           ));
 
         // ✅ Allow all HTTP methods
         config.setAllowedMethods(
