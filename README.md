@@ -12,8 +12,8 @@
 
 | App | URL |
 |-----|-----|
-| Customer App | Coming Soon |
-| Admin Panel | Coming Soon |
+| Customer App | https://vignesh-portfolio-silk.vercel.app |
+| Admin Panel | https://eatzo-admin.vercel.app/ |
 
 ---
 
